@@ -1,0 +1,80 @@
+from utils_r3 import crear_tablero, colocar_barcos, disparar
+import time
+import numpy as np
+
+#VARIABLES JUGADOR
+tablero_jugador_disparos = crear_tablero() #tablero donde se marcan los disparos del jugador
+tablero_jugador_barcos = crear_tablero() # tablero donde se marcan los barcos del jugador
+lista_disparos_jugador =[]
+
+#VARIABLES RIVAL
+tablero_rival_disparos = crear_tablero() #tablero donde se marcan los disparos del rival
+tablero_rival_barcos = crear_tablero() # tablero donde se marcan los barcos del rival
+lista_disparos_rival =[]
+
+#FUNCION DE PEDIR BARCOS AL RIVAL Y JUGADOR
+#lista_barcos_jugador = pedir_barcos_jugador()
+#lista_barcos_rival = pedir_barcos_rival()
+
+#lista barcos
+lista_barcos_jugador = [[(0,1), (0,2)], [(3,4),(4,4),(5,4)]] #coloca 1 barco en Horizontal otro barco vertical
+lista_barcos_rival = [[(3,1), (3,2)], [(3,7),(4,7),(5,7)]]
+#LISTA DE DISPAROS
+lista_disparo_jugador = []
+lista_disparo_rival = []
+
+
+#colocar barcos jugador
+tablero_jugador_barcos = colocar_barcos(lista_barcos_jugador, tablero_jugador_barcos)
+#colocar barcos jugador
+tablero_rival_barcos = colocar_barcos(lista_barcos_rival, tablero_rival_barcos)
+
+print("________TABLERO JUGADOR_BARCOS_____________")
+print(tablero_jugador_barcos)
+print("_______TABLERO RIVAL BARCOS_______________")
+print(tablero_rival_barcos)
+
+time.sleep(3)
+print("tu turno jugador")
+
+#esto lo omito porque lo tengo dentro del while
+#tablero_rival_barcos, lista_disparo_jugador = disparar (tablero_rival_barcos,lista_disparo_jugador)
+#la funcion disparar la recibimos con 3 variables  !!!IMPORT!!
+
+time.sleep(3)
+
+turno_jugador = True
+while True:
+    if turno_jugador == True:
+        #disparo jugador
+        tablero_rival_barcos, lista_disparo_jugador, turno_jugador = disparar (tablero_rival_barcos,lista_disparo_jugador,turno_jugador)
+        time.sleep(3)
+        print("________TABLERO DISPAROS JUGADOR_____________")
+        print(tablero_jugador_barcos, turno_jugador)
+
+        print("_______TABLERO DISPAROS RIVAL_______________")
+        print(tablero_rival_barcos)
+
+    else:
+        print("turno jugador")
+        break
+
+    pos_o = np.any(tablero_jugador_barcos == "O") #metodo any comprueba la O en cualqueir sitio del aaray
+    if "O" == False:
+        print("FIN DEL JUEGO")
+        break
+
+
+
+
+"""
+#SOY EL RIVAL
+tablero_jugador_barcos = disparar(tablero_jugador_barcos, lista_disparos_rival)
+
+print(tablero_jugador_barcos)
+print(lista_disparos_rival)
+
+#CREAR BARCO
+barco = crear_barco (4)
+
+"""
