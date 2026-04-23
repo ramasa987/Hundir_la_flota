@@ -1,23 +1,23 @@
-# Hundir_la_flota
+**# Hundir_la_flota**
 
-##Descripción
+## Descripción
 
 Este proyecto implementa el juego clásico "Hundir la Flota" en Python. El juego involucra dos jugadores, cada uno con su propio tablero de barcos. El objetivo es hundir todos los barcos del oponente mediante disparos a sus coordenadas.
 
-##Autor
+## Autor
 
     Raúl Marcos
 
-##Librerías Utilizadas
+## Librerías Utilizadas
 
     NumPy
 
-##Recursos Utilizados
+## Recursos Utilizados
 
     Python 3.12.10
     VSCode
 
-##Archivos
+## Archivos
     utils.py
 
     Este archivo contiene funciones esenciales para el juego.
@@ -30,12 +30,12 @@ Este proyecto implementa el juego clásico "Hundir la Flota" en Python. El juego
     El script principal inicia y gestiona el juego. El jugador juega contra la maquina.
     La posicion de los barcos esta definida por una lista fija
 
-##Ejecución
+## Ejecución
 
     Para iniciar el juego, simplemente ejecute el script main.py. Siga las instrucciones en la consola para ingresar coordenadas y jugar contra la máquina.
 
 
-##Reglas del Juego
+## Reglas del Juego
 
     Cada jugador tiene barcos de diferentes longitudes:
         3 barcos de 2 posiciones de eslora
@@ -46,6 +46,6 @@ Este proyecto implementa el juego clásico "Hundir la Flota" en Python. El juego
     Las coordenadas se ingresan como pares de números (fila, columna) del 0 al 9.
     
 
-##Salida del Juego
+## Salida del Juego
 
 El juego imprime en la consola el resultado del juego.
