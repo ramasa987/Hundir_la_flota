@@ -1,6 +1,18 @@
-from utils_r3 import crear_tablero, colocar_barcos, disparar
+from utils_r4 import crear_tablero, colocar_barcos, disparar
 import time
 import numpy as np
+
+print(" vamos a jugar al jego HUNDIR LA FLOTA")
+print(" definimos 2 tableros para el jugador")
+print(" Un tablero es para disparar y el otro para colocar los barcos")
+print(" lo mismo para el rival")
+
+time.sleep(3)
+
+print(" los barcos estan colocados de forma fija")
+print(" DISPARA, mucha suerte")
+
+time.sleep(3)
 
 #VARIABLES JUGADOR
 tablero_jugador_disparos = crear_tablero() #tablero donde se marcan los disparos del jugador
@@ -12,9 +24,6 @@ tablero_rival_disparos = crear_tablero() #tablero donde se marcan los disparos d
 tablero_rival_barcos = crear_tablero() # tablero donde se marcan los barcos del rival
 lista_disparos_rival =[]
 
-#FUNCION DE PEDIR BARCOS AL RIVAL Y JUGADOR
-#lista_barcos_jugador = pedir_barcos_jugador()
-#lista_barcos_rival = pedir_barcos_rival()
 
 #lista barcos
 lista_barcos_jugador = [[(0,1), (0,2)], [(3,4),(4,4),(5,4)]] #coloca 1 barco en Horizontal otro barco vertical
@@ -29,9 +38,9 @@ tablero_jugador_barcos = colocar_barcos(lista_barcos_jugador, tablero_jugador_ba
 #colocar barcos jugador
 tablero_rival_barcos = colocar_barcos(lista_barcos_rival, tablero_rival_barcos)
 
-print("________TABLERO JUGADOR_BARCOS_____________")
+print("________TABLERO JUGADOR_DISPASOR_____________")
 print(tablero_jugador_barcos)
-print("_______TABLERO RIVAL BARCOS_______________")
+print("_______TABLERO JUGADOR BARCOS_______________")
 print(tablero_rival_barcos)
 
 time.sleep(3)
@@ -52,7 +61,7 @@ while True:
         print("________TABLERO DISPAROS JUGADOR_____________")
         print(tablero_jugador_barcos, turno_jugador)
 
-        print("_______TABLERO DISPAROS RIVAL_______________")
+        print("__________TABLERO RIVAL BARCOS_______________")
         print(tablero_rival_barcos)
 
     else:
@@ -63,18 +72,3 @@ while True:
     if "O" == False:
         print("FIN DEL JUEGO")
         break
-
-
-
-
-"""
-#SOY EL RIVAL
-tablero_jugador_barcos = disparar(tablero_jugador_barcos, lista_disparos_rival)
-
-print(tablero_jugador_barcos)
-print(lista_disparos_rival)
-
-#CREAR BARCO
-barco = crear_barco (4)
-
-"""
