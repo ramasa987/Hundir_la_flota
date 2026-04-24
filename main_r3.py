@@ -17,17 +17,17 @@ time.sleep(3)
 #VARIABLES JUGADOR
 tablero_jugador_disparos = crear_tablero() #tablero donde se marcan los disparos del jugador
 tablero_jugador_barcos = crear_tablero() # tablero donde se marcan los barcos del jugador
-lista_disparos_jugador =[]
+
 
 #VARIABLES RIVAL
 tablero_rival_disparos = crear_tablero() #tablero donde se marcan los disparos del rival
 tablero_rival_barcos = crear_tablero() # tablero donde se marcan los barcos del rival
-lista_disparos_rival =[]
 
 
 #lista barcos
 lista_barcos_jugador = [[(0,1), (0,2)], [(3,4),(4,4),(5,4)]] #coloca 1 barco en Horizontal otro barco vertical
 lista_barcos_rival = [[(3,1), (3,2)], [(3,7),(4,7),(5,7)]]
+
 #LISTA DE DISPAROS
 lista_disparo_jugador = []
 lista_disparo_rival = []
@@ -46,9 +46,7 @@ print(tablero_rival_barcos)
 time.sleep(3)
 print("tu turno jugador")
 
-#esto lo omito porque lo tengo dentro del while
-#tablero_rival_barcos, lista_disparo_jugador = disparar (tablero_rival_barcos,lista_disparo_jugador)
-#la funcion disparar la recibimos con 3 variables  !!!IMPORT!!
+
 
 time.sleep(3)
 
