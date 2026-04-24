@@ -1,18 +1,22 @@
-from utils_r4 import crear_tablero, colocar_barcos, disparar
+from utils_r3 import crear_tablero, colocar_barcos, disparar
 import time
 import numpy as np
 
-print(" vamos a jugar al jego HUNDIR LA FLOTA")
-print(" definimos 2 tableros para el jugador")
-print(" Un tablero es para disparar y el otro para colocar los barcos")
-print(" lo mismo para el rival")
+print(" Vamos a jugar al juego HUNDIR LA FLOTA")
+print(" Definimos 2 TABLEROS")
+print(" TABLERO JUGADOR BARCOS. El jugador coloca sus barcos con una lista fija")
+print(" TABLERO RIVAL BARCOS. La maquina coloca sus barcos con una lista fija")
+
+time.sleep(10)
+
+print(" Cuando disparemos, se marcaran en otro tablero para que no repitamos coordenada de disparo")
 
 time.sleep(3)
 
-print(" los barcos estan colocados de forma fija")
-print(" DISPARA, mucha suerte")
+print(" !!!IMPORT !!! . Los barcos estan colocados de forma fija")
+print(" DISPARA, Mucha suerte !!!!!!")
 
-time.sleep(3)
+time.sleep(6)
 
 #VARIABLES JUGADOR
 tablero_jugador_disparos = crear_tablero() #tablero donde se marcan los disparos del jugador
@@ -38,9 +42,9 @@ tablero_jugador_barcos = colocar_barcos(lista_barcos_jugador, tablero_jugador_ba
 #colocar barcos jugador
 tablero_rival_barcos = colocar_barcos(lista_barcos_rival, tablero_rival_barcos)
 
-print("________TABLERO JUGADOR_DISPASOR_____________")
+print("________TABLERO JUGADOR_BARCOS_____________")
 print(tablero_jugador_barcos)
-print("_______TABLERO JUGADOR BARCOS_______________")
+print("_______TABLERO RIVAL BARCOS_______________")
 print(tablero_rival_barcos)
 
 time.sleep(3)
@@ -56,10 +60,10 @@ while True:
         #disparo jugador
         tablero_rival_barcos, lista_disparo_jugador, turno_jugador = disparar (tablero_rival_barcos,lista_disparo_jugador,turno_jugador)
         time.sleep(3)
-        print("________TABLERO DISPAROS JUGADOR_____________")
+        print("________TABLERO DISPAROS RIVAL_____________")
         print(tablero_jugador_barcos, turno_jugador)
 
-        print("__________TABLERO RIVAL BARCOS_______________")
+        print("__________TABLERO DISPAROS JUGADOR_______________")
         print(tablero_rival_barcos)
 
     else:

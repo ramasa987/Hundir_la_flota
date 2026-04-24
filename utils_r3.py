@@ -34,10 +34,12 @@ def disparar (tablero,lista,turno):
         tablero[fila][columna] = "X"
         print("TOCADOOOO !!!!!")
         turno = True
+        print(" SIGUE DISPARANDO")
     else:
         tablero[fila][columna]= "A"
         print ("AGUAAAA !!!!")
         turno= False
+        print("Tu turno RIVAL")
 
     lista.append((fila, columna))
 
